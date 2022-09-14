@@ -1,0 +1,12 @@
+{
+  "name": "Challenge",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Nivisan Jeyananthan",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@type-challenges/utils": "^0.1.1",
+    "typescript": "^4.8.2"
+  }
+}
