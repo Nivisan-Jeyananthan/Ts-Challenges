@@ -24,13 +24,17 @@ type TupleToUnion<T> = T extends any[] ? T[number] : never;
 
 type TupleTunion<T> = T extends Array<infer TItem> ? TItem : never;
 
-type SS = TupleTunion<[123, "456", true]>;
+type SA = TupleTunion<[123, '456', true]>;
+//    ^?
+
+type SS = TupleTunion<[123, '456', true]>;
+//   ^?
 
 /* _____________ Test Cases _____________ */
-import type { Equal, Expect } from "@type-challenges/utils";
+import type { Equal, Expect } from '@type-challenges/utils';
 
 type cases = [
-  Expect<Equal<TupleToUnion<[123, "456", true]>, 123 | "456" | true>>,
+  Expect<Equal<TupleToUnion<[123, '456', true]>, 123 | '456' | true>>,
   Expect<Equal<TupleToUnion<[123]>, 123>>
 ];
 
