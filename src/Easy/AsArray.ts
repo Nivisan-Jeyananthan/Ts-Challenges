@@ -1,9 +1,12 @@
 type AsArray<T> = T extends any ? Array<T> : never;
 
-// distributive conditional type will iterate over each member
-// and apply the given type check on all of them.
-// this leaves us with string[] | number[]
-// instead of an array where both are inside.
+/*
+ distributive conditional type will iterate over each member
+ and apply the given type check on all of them.
+ this leaves us with
+ string[] | number[]
+ instead of an array where both are inside.
+*/
 type StrArrOrNumArr = AsArray<string | number>;
 
 /*

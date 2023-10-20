@@ -29,6 +29,9 @@ declare function PromiseAll<T extends any[]>(
   values: readonly [...T]
 ): Promise<{ [K in keyof T]: PromiseFlat<T[K]> }>;
 
+type Saaa<T> = { [K in keyof T]: PromiseFlat<T[K]> };
+//    ^?
+
 /* _____________ Test Cases _____________ */
 import type { Equal, Expect } from '@type-challenges/utils';
 

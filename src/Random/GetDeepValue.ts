@@ -22,9 +22,9 @@ const obj = {
     b: 2,
   },
   bar: {
-    c: "cool",
+    c: 'cool',
     d: 2,
   },
 };
 
-const result = getDeepValue(obj, "bar", "c");
+const result = getDeepValue(obj, 'bar', 'c');
